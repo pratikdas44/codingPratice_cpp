@@ -1,0 +1,10 @@
+1.Lambda(): an inline function , link: https://www.geeksforgeeks.org/lambda-expression-in-c/
+[ capture clause ] (parameters) -> return-type  
+{   
+   definition of method   
+} 
+
+2.memset(): function which copies the character in object pointed by str.
+      void* memset(void* str,int ch,size_t n)
+       ch: number of characters to copy, n: number of bytes to copy.
+

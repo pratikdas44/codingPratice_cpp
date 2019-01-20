@@ -1,0 +1,31 @@
+//Bitwise operations.
+1.Rightmost 1 position: a) ffs(x) //returns the index of first least significant set bit
+  b) int position = 1; 
+    int m = 1; 
+  
+    while (!(n & m)) { 
+  
+        // left shift 
+        m = m << 1; 
+        position++; 
+    } 
+    return position; // n is integer whose rightmost one is to find.
+
+2.Toggle bits in given range: l = rightmost index, r = left of l.
+             ans = pow(2,r) - pow(2,l-1);// this is given a number having 1 at range [l,r].
+             ans^=n.
+ Toggle bits: num ^= (1 << pos)  // remembering the indexing starts from rightmost digit from 0 and so on...
+
+3.set nth bit to 1: num = num | (1<<pos)
+4. power of 2: x && (!(x&(x-1))) or ceil(log2(n)) == floor(log2(n));
+5.clear a bit: num &= (~(1 << pos))
+6.even = !(n&1);
+7.count no of 1's bits: //Brian Kernighan’s
+ unsigned int count = 0; 
+    while (n) 
+    { 
+      n &= (n-1) ; 
+      count++; 
+    } 
+    return count; 
+8. __builtin_popcount() : count number of set bits

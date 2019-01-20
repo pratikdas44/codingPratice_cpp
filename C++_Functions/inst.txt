@@ -1,0 +1,2 @@
+1.use long long instead of int is range is very long.
+2.return modulus(10^9+7) : 
