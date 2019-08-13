@@ -1,4 +1,5 @@
-//Program to print largest number possible formed from an array.Here using append function to check for numbers such as 98 and 980.
+//Program to print largest number possible formed from an array.
+//Here using append function to check for numbers such as 98 and 980.
 #include <iostream>
 #include <algorithm>
 #include <list>

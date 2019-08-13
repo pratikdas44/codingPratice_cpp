@@ -1,4 +1,5 @@
-// program to find min height between longest and smallest tower, after they are operated by k only once.
+// program to find min height between longest and smallest tower,
+// after they are operated by k only once.
 #include <bits/stdc++.h>
 using namespace std;
 int minimize(int a[],int n,int k){

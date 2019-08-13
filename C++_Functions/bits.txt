@@ -28,4 +28,31 @@
       count++; 
     } 
     return count; 
-8. __builtin_popcount() : count number of set bits
+
+8.GCC Builtins:
+a. __builtin_popcount() : count number of set bits;  Number of leading zeroes: builtin_clz(x); Number of trailing zeroes : builtin_ctz(x); Even or odd parity: _builtin_parity(x) //default is odd parity
+
+9.Number : Given Number
+Value  : A number with all bits set in given number.
+Flipped number = Value – Number. //to find flipped no.
+
+10. bits in alternate pattern: n ^ (n>>1)
+11. Clear all bits from LSB to ith bit : mask = ~((1 << i+1 ) - 1);  x &= mask;
+12. Clearing all bits from MSB to i-th bit: mask = (1 << i) - 1;x &= mask;
+13. 
+
+        x & (x-1) will clear the lowest set bit of x
+        x & ~(x-1) extracts the lowest set bit of x (all others are clear). Pretty patterns when applied to a linear sequence.
+        x & (x + (1 << n)) = x, with the run of set bits (possibly length 0) starting at bit n cleared.
+        x & ~(x + (1 << n)) = the run of set bits (possibly length 0) in x, starting at bit n.
+        x | (x + 1) = x with the lowest cleared bit set.
+        x | ~(x + 1) = extracts the lowest cleared bit of x (all others are set).
+        x | (x - (1 << n)) = x, with the run of cleared bits (possibly length 0) starting at bit n set.
+        x | ~(x - (1 << n)) = the lowest run of cleared bits (possibly length 0) in x, starting at bit n are the only clear bits.
+
+
+
+
+
+
+

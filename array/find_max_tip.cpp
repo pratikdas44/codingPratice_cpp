@@ -1,4 +1,5 @@
-//Program to find maximum tip among two waiters, both take tips according to orders and result is max tip.
+//Program to find maximum tip among two waiters, both take 
+//tips according to orders and result is max tip.
 //Here DP is used.
 //fabs return |x| value.
 #include <iostream>

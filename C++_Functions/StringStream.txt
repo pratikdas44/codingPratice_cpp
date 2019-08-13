@@ -1,0 +1,124 @@
+//String Stream is a class which associates a string object with a stream allowing to read from string as if it were a stream.
+
+Basic Methods: clear() - to clear the stream
+str() - to get and set string object whose content is in stream
+>> - add a string to the stringstream object
+<< - read something from the stringstream object.
+
+
+Example: Count the number of words in a string.
+int countWords(string str) 
+{ 
+    // breaking input into word using string stream 
+    stringstream s(str); // Used for breaking words 
+    string word; // to store individual words 
+  
+    int count = 0; 
+    while (s >> word) 
+        count++; 
+    return count; 
+} 
+
+Example: to remove spaces between words
+string removeSpaces(string str) 
+{ 
+    stringstream ss; 
+    string temp; 
+  
+    /* Storing the whole string into string stream */
+    ss << str; 
+  
+    /* Making the string empty */
+    str = ""; 
+  
+    /* Running loop till end of stream */
+    while (!ss.eof()) 
+    { 
+        /* extracting word by word from stream */
+        ss >> temp; 
+  
+        /* concatenating in the string to be 
+          returned*/
+        str = str + temp; 
+    } 
+    return str; 
+} 
+
+3.converting string to integers:
+a.stringstream():   
+    stringstream geek(s); 
+    // The object has the value 12345 and stream 
+    // it to the integer x 
+    int x = 0; 
+    geek >> x;  //if s = "a1" type value of x = 0;
+
+b.stoi() : The stoi() function takes a string as an argument and returns its value.
+  eg: string s = "21 geek"
+      int m = stoi(s);cout << m;
+** stoi only works for integer coming before string.
+
+c.atoi(): works on c characters array
+
+4. conversion of integer to string:
+  ostringstream str1,str2;
+  str1 << n;str2 << m;
+  string a = str1.str();string b = str2.str()
+
+  or : to_string(number);
+
+3.To parse comma-separated integers from a string (e.g., "23,4,56").
+
+vector<int> parseInts(string str) {
+stringstream ss(str);   //??
+vector<int> result;
+char ch;
+int tmp;
+while(ss >> tmp) {      //ss >> tmp, only reads integer values
+    result.push_back(tmp); //tmp values are pushed in result
+    ss >> ch;           //?? now next are ,4 ,so ',' is stored in ch.
+}
+return result;}  //
+
+
+4.reverse string word by word
+stringstream ss(A);
+string word;string s;
+vector<string> v;
+while(ss >> word)
+{
+ v.push_back(word);
+}
+
+for(int i=v.size()-1;i>0;--i)  {s += v[i];s += ' ';}
+ s += v[0];
+ A = s;
+
+ // or when character array is given in term of pointer.
+ while(1)
+{
+
+
+    while(s[j] != '.' && j !=0 )
+ {  //cout<<"s[j] is "<<s[j]<<endl;
+     //cout<<"j is "<<j<<endl;
+    j--;
+ }
+    if(j==0)
+    {
+      for(int k = j;k<=i;k++)
+        {cout<<s[k];
+        }
+      break;
+    }
+    else{
+           // cout<<"j is "<<j<<endl;
+        for(int k = j+1;k<=i;k++)
+        {cout<<s[k];
+        }
+        cout<<".";
+    }
+    i=j-1;
+    j=i;
+
+}
+}

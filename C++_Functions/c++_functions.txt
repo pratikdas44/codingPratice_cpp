@@ -4,7 +4,8 @@
    definition of method   
 } 
 
-2.memset(): function which copies the character in object pointed by str.
-      void* memset(void* str,int ch,size_t n)
+2.memset(): Converts the value ch to unsigned char and copies it into each of the first n characters of the object pointed to by str[]
+      void* memset(void* str,int ch,size_t n) //only works for ch = 0 or -1;
        ch: number of characters to copy, n: number of bytes to copy.
 
+3. 

@@ -1,0 +1,47 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+/*int g(int a,int b,int c,int n,int m)
+{
+   /*int prev_Fib=1,curr_Fib=1,next_Fib;
+	    if(n==1 || n==2)
+	    return n;
+	    while(n>2)
+	    {
+			next_Fib=a*curr_Fib+b*prev_Fib+c;
+	        prev_Fib=curr_Fib;
+	        curr_Fib=next_Fib;
+	        n--;
+		}
+	return(curr_Fib%m);
+	int fib[n],i;
+	 fib[0] = fib[1] = 1;
+	 for(i=2;i<n;i++)
+	  { fib[i] = a*fib[i-1]+b*fib[i-2]+c;
+
+	    }
+	    return(fib[n-1]%m);
+
+
+}*/
+
+
+
+int main() {
+	int t,a,b,c,n,m;
+	scanf("%d",&t);
+	while(t--)
+	 {
+	     scanf("%d %d %d %d %d",&a,&b,&c,&n,&m);
+        int fib[n],i;
+	 fib[0] = fib[1] = 1;
+	 for(i=2;i<n;i++)
+	  { fib[i] = a*fib[i-1]+b*fib[i-2]+c;
+
+	    }
+	    printf("%d",fib[n-1]%m);
+      }
+
+	return 0;
+}
+

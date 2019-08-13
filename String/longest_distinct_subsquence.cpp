@@ -5,14 +5,14 @@
 using namespace std;
 
 // define character range
-#define CHAR_RANGE 128
+#define CHAR_RANGE 128 
 
 // Function to find longest substring containing all distinct
 // characters in it using sliding window
 string longestSubstr(string str, int n)
 {
 	// boolean array to mark characters present in current window
-	vector<bool> window(CHAR_RANGE);
+	vector<bool> window(CHAR_RANGE); 
 
 	// stores longest substring boundaries
 	int begin = 0, end = 0;

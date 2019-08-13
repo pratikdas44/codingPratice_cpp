@@ -2,7 +2,8 @@
 
     a Bit - 2ms
 
-after a Bit appears, it grows up and becomes a Nibble (i.e. it disappears and a Nibble appears)
+after a Bit appears, it grows up and becomes a Nibble 
+(i.e. it disappears and a Nibble appears)
 a Nibble - 8ms
 after a Nibble appears, it grows up and becomes a Byte
 a Byte - 16ms

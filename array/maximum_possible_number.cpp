@@ -61,7 +61,7 @@ int main()
 } 
 
 
-//vice versa program of above
+//vice versa program of above ie find smallest number
 void findSmallest(int m, int s) 
 { 
     // If sum of digits is 0, then a number is possible 

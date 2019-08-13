@@ -1,2 +1,20 @@
 // Algorithm STL in C++
-1.
+1.rotate: left: s.begin()+3 //left 3 times
+  It rotates the order of the elements in the range [first,last], in such a way that the element pointed by middle becomes the new first element.
+          right: s.begin()+s.size()-3;//right rotate
+   rotate(s.begin(),s.begin()+3,s.end());
+
+2.reverse: to reverse elments of array/vector/string/-- reverse(a.begin(),a.end())
+3.sort(a+n,a+m,greater<int>()) //a+n means nth element from start.
+4.remove(a.begin(),a.end(),element); and remove_if(a.begin(),a.end(),function());//remove elements for which function return true.
+Both above functions only move element equal to element to last, and returns a pointer to first of those elements.
+For this, take an iterator it = remove(...);
+output all others from begin to iterator it -1;
+5.transform(sl.begin(), sl.end(), sl.begin(), ::tolower); to convert upper to lower.
+transform(Iterator inputBegin, Iterator inputEnd, 
+         Iterator OutputBegin, unary_operation)  and 
+transform(Iterator inputBegin1, Iterator inputEnd1, 
+         Iterator inputBegin2, Iterator OutputBegin, 
+         binary_operation) 
+
+6.

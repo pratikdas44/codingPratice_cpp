@@ -1,4 +1,7 @@
-/*Program to find maximum sum increasing subsquence. Like in 1,101,2,3,100: increasing subsquence are 1,101 , 1,2,3,100, 2,3,100. Answer is maximum of all this. */
+/*Program to find maximum sum increasing subsquence. 
+Like in 1,101,2,3,100: increasing subsquence are 
+1,101 , 1,2,3,100, 2,3,100. Answer is maximum of 
+all this. */
 
 #include <iostream>
 #include <stdio.h>
