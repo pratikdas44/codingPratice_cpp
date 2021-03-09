@@ -23,7 +23,7 @@ int findequi(int arr[], int n)
             if (arr[i] > arr[j] &&  
                 ms[i] < ms[j] + arr[i]) 
                 ms[i] = ms[j] + arr[i]; 
-  
+    
     /* Pick maximum of 
        all msis values */
     for ( i = 0; i < n; i++ ) 

@@ -76,3 +76,36 @@ void bfs(int s,vector<int> adj[],bool vis[])
         }
     }
 }
+
+//level order traversal
+
+vector<vector<int>> levelOrder(TreeNode* root) {
+        if(root==NULL) return {};
+        
+        queue<TreeNode*> q;
+        vector<vector<int>> result;
+        vector<int> res;
+        q.push(root);
+        q.push(NULL);
+        
+        while(!q.empty())
+        {
+            TreeNode *temp = q.front();
+            q.pop();
+            if(temp==NULL)
+            {
+               if(!q.empty())
+                q.push(NULL);
+                
+                result.push_back(res);
+                res.clear();
+            }
+            else
+            {
+            res.push_back(temp->val);
+            if(temp->left) q.push(temp->left);
+            if(temp->right) q.push(temp->right);
+            } 
+        }
+    return result;
+    }
